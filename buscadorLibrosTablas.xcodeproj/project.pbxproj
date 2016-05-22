@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83904C361CF2418900893C66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83904C351CF2418900893C66 /* AppDelegate.swift */; };
+		83904C381CF2418900893C66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83904C371CF2418900893C66 /* ViewController.swift */; };
+		83904C3B1CF2418900893C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83904C391CF2418900893C66 /* Main.storyboard */; };
+		83904C3E1CF2418900893C66 /* buscadorLibrosTablas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83904C3C1CF2418900893C66 /* buscadorLibrosTablas.xcdatamodeld */; };
+		83904C401CF2418900893C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83904C3F1CF2418900893C66 /* Assets.xcassets */; };
+		83904C431CF2418900893C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83904C411CF2418900893C66 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83904C321CF2418900893C66 /* buscadorLibrosTablas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = buscadorLibrosTablas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83904C351CF2418900893C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		83904C371CF2418900893C66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83904C3A1CF2418900893C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83904C3D1CF2418900893C66 /* buscadorLibrosTablas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = buscadorLibrosTablas.xcdatamodel; sourceTree = "<group>"; };
+		83904C3F1CF2418900893C66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83904C421CF2418900893C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83904C441CF2418900893C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83904C2F1CF2418900893C66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83904C291CF2418900893C66 = {
+			isa = PBXGroup;
+			children = (
+				83904C341CF2418900893C66 /* buscadorLibrosTablas */,
+				83904C331CF2418900893C66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83904C331CF2418900893C66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83904C321CF2418900893C66 /* buscadorLibrosTablas.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83904C341CF2418900893C66 /* buscadorLibrosTablas */ = {
+			isa = PBXGroup;
+			children = (
+				83904C351CF2418900893C66 /* AppDelegate.swift */,
+				83904C371CF2418900893C66 /* ViewController.swift */,
+				83904C391CF2418900893C66 /* Main.storyboard */,
+				83904C3F1CF2418900893C66 /* Assets.xcassets */,
+				83904C411CF2418900893C66 /* LaunchScreen.storyboard */,
+				83904C441CF2418900893C66 /* Info.plist */,
+				83904C3C1CF2418900893C66 /* buscadorLibrosTablas.xcdatamodeld */,
+			);
+			path = buscadorLibrosTablas;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83904C311CF2418900893C66 /* buscadorLibrosTablas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83904C471CF2418900893C66 /* Build configuration list for PBXNativeTarget "buscadorLibrosTablas" */;
+			buildPhases = (
+				83904C2E1CF2418900893C66 /* Sources */,
+				83904C2F1CF2418900893C66 /* Frameworks */,
+				83904C301CF2418900893C66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = buscadorLibrosTablas;
+			productName = buscadorLibrosTablas;
+			productReference = 83904C321CF2418900893C66 /* buscadorLibrosTablas.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83904C2A1CF2418900893C66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = ITESO;
+				TargetAttributes = {
+					83904C311CF2418900893C66 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 83904C2D1CF2418900893C66 /* Build configuration list for PBXProject "buscadorLibrosTablas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83904C291CF2418900893C66;
+			productRefGroup = 83904C331CF2418900893C66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83904C311CF2418900893C66 /* buscadorLibrosTablas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83904C301CF2418900893C66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83904C431CF2418900893C66 /* LaunchScreen.storyboard in Resources */,
+				83904C401CF2418900893C66 /* Assets.xcassets in Resources */,
+				83904C3B1CF2418900893C66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83904C2E1CF2418900893C66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83904C381CF2418900893C66 /* ViewController.swift in Sources */,
+				83904C3E1CF2418900893C66 /* buscadorLibrosTablas.xcdatamodeld in Sources */,
+				83904C361CF2418900893C66 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83904C391CF2418900893C66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83904C3A1CF2418900893C66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83904C411CF2418900893C66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83904C421CF2418900893C66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83904C451CF2418900893C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83904C461CF2418900893C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83904C481CF2418900893C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = buscadorLibrosTablas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uLab.buscadorLibrosTablas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83904C491CF2418900893C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = buscadorLibrosTablas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uLab.buscadorLibrosTablas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83904C2D1CF2418900893C66 /* Build configuration list for PBXProject "buscadorLibrosTablas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83904C451CF2418900893C66 /* Debug */,
+				83904C461CF2418900893C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83904C471CF2418900893C66 /* Build configuration list for PBXNativeTarget "buscadorLibrosTablas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83904C481CF2418900893C66 /* Debug */,
+				83904C491CF2418900893C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		83904C3C1CF2418900893C66 /* buscadorLibrosTablas.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				83904C3D1CF2418900893C66 /* buscadorLibrosTablas.xcdatamodel */,
+			);
+			currentVersion = 83904C3D1CF2418900893C66 /* buscadorLibrosTablas.xcdatamodel */;
+			path = buscadorLibrosTablas.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 83904C2A1CF2418900893C66 /* Project object */;
+}
