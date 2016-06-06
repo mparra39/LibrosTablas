@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class TVC: UITableViewController {
 
     let lib = Libros.sharedInstance
+    
+    @IBOutlet var tableViewLibros: UITableView!
+    //coreData
+//    let managedContext = appDelegate.managedObjectContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +26,53 @@ class TVC: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 //         self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        
+        
+        tableViewLibros.registerClass(UITableViewCell.self,
+                                forCellReuseIdentifier: "Cell")
+        
+        //1
+        let appDel : AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        
+        let managedContext : NSManagedObjectContext = appDel.managedObjectContext
+        
+        //2
+        let fetchRequest = NSFetchRequest(entityName: "Libro")
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do{
+            let resultado : NSArray = try managedContext.executeFetchRequest(fetchRequest)
+            if resultado.count > 0 {
+                for res in resultado {
+                    print("resultado \(res)")                    //                    self.lib.contexto = (res as? [NSManagedObject])!
+//                    self.lib.contexto.append(res as! NSManagedObject)
+//                    print(libro.valueForKey("titulo") as? String)
+                    self.lib.libros.append([res.valueForKey("titulo") as? String, res.valueForKey("autores") as? String, res.valueForKey("imagen") as? String])
+                    print(resultado.count)
+                }
+                print(self.lib.libros)
+                self.tableView!.reloadData()
+
+                //                self.lib.contexto = resultado as! [NSManagedObject]
+            }
+            
+            self.tableView!.reloadData()        //Se actualiza la vista ***
+            
+            
+        }catch {
+            
+        }
+        
+        self.tableView!.reloadData()        //Se actualiza la vista ***
         self.title = "Búsqueda"
     }
     
     override func viewWillAppear(animated: Bool) {      //Si regresa del hijo con la modificación de la sangre se actualizará
-        
+        super.viewWillAppear(animated)
+    
         self.tableView!.reloadData()        //Se actualiza la vista ***
-        print(self.lib.libros)
+//        print(self.lib.libros)
+//        print(self.lib.contexto)
     }
 
 
@@ -52,7 +97,12 @@ class TVC: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Celda", forIndexPath: indexPath)
         
         //Configuracion de celda
-        cell.textLabel?.text = self.lib.libros[indexPath.row][0]
+//        cell.textLabel?.text = self.lib.libros[indexPath.row][0]
+//        print(self.lib.libros[indexPath.row][0])
+        print(indexPath.row)
+//        let libro = self.lib.libros[indexPath.row][0]
+        
+        cell.textLabel!.text = self.lib.libros[indexPath.row][0]
         print(self.lib.libros[indexPath.row][0])
         
         return cell

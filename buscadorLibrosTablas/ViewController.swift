@@ -8,6 +8,7 @@
 
 import UIKit
 import SystemConfiguration
+import CoreData
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -21,6 +22,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var tit = String()
     var aut = String()
     var por : String? = nil
+    
+    
+    //coreData
+    let appDelegate =
+        UIApplication.sharedApplication().delegate as! AppDelegate
+//    var contexto = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,16 +90,55 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         aut = aut + (dico["name"] as! NSString as String)
                     }
                     
+                    
+                    //coreData
+                    let managedContext = appDelegate.managedObjectContext
+      
+                    let entity =  NSEntityDescription.entityForName("Libro",
+                                                                    inManagedObjectContext: managedContext)
+                                      
+                    let libro = NSManagedObject(entity: entity!,
+                                                 insertIntoManagedObjectContext: managedContext)
+                    
+                    libro.setValue(dico3, forKey: "titulo")
+                    libro.setValue(self.aut, forKey: "autores")
+                    
+                    
                     if let dico4 = dico1["cover"] as? NSDictionary{
                         por = dico4["large"] as? String
-                            let imagen = NSURL(string: por!)
-                            let datos = NSData(contentsOfURL: imagen!)
+                        let imagen = NSURL(string: por!)
+                        let datos = NSData(contentsOfURL: imagen!)
                         
-                            self.portada.image = UIImage(data: datos!)
+                        self.portada.image = UIImage(data: datos!)
+                        
+                       libro.setValue(self.por, forKey: "imagen")
+
                         
                     }else{
                         por = nil
+                        libro.setValue(self.por, forKey: "imagen")
                     }
+                    
+                    //9780313016691  //con imagen
+                    //978-84-376-0494-7
+                    //9780313312601
+                    //9780883782972
+                    //9780809572410
+                    
+//                    libro.setValue(dico3, forKey: "imagen")
+                    //libro.setValue(creaAutoresEntidad(self.autor.text!), forKey: "pertenece") //truena
+                    
+                    do {
+                        try managedContext.save()
+                        self.lib.contexto.append(libro)
+                        print(self.lib.contexto)
+//                        self.lib.libroEntidad = contexto
+//                        print(self.lib.libroEntidad)
+                    } catch let error as NSError  {
+                        print("Error \(error), \(error.userInfo)")
+                    }
+
+                    
                     
                 } else {
                     let alert = UIAlertController(title: "Error en búsqueda", message: "ISBN no encontrado", preferredStyle: .Alert)
@@ -128,6 +174,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+    //coredata
+//    func creaImagenesEntidad(imagenes : [UIImage]) -> Set<NSObject>{
+//        var entidades = Set<NSObject>()
+//        
+//        for imagen in imagenes {
+//            let imagenEntidad = NSEntityDescription.insertNewObjectForEntityForName("Imagen", inManagedObjectContext: self.portada.image!)
+//            imagenEntidad.setValue(UIImagePNGRepresentation(imagen), forKey: "contenido")
+//            entidades.insert(imagenEntidad)
+//        }
+//        
+//        return entidades
+//    }
+
     
     
     @IBAction func textFieldDoneEditing(sender: UIScrollView){   //al darle enter desaparece el teclado

@@ -7,10 +7,15 @@
 //
 
 import Foundation
+import CoreData
 
 class Libros {
     
     static let sharedInstance = Libros()
+    var contexto = [NSManagedObject]()
+    var libroEntidad = NSObject()
+  
+    
 //    var titulo = String()
 //    var autores = String()
 //    var imagen : String? = nil
@@ -25,7 +30,6 @@ class Libros {
     init(titulo: String, autores: String, imagen: String?){
         
         self.libros.append([titulo, autores, imagen!])
-        
     }
     
 //    func llenado(){
